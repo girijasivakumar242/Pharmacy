@@ -18,13 +18,14 @@ import pharmacyRoutes from "./routes/pharmacyRoutes.js";
 import medicineRoutes from "./routes/medicineRoutes.js";
 import searchRouter from "./routes/searchRoute.js";
 
+app.get("/", (req, res) => {
+  res.json({ message: "MedExchange Backend is Live 🚀" });
+});
+
 app.use("/api/pharmacy", pharmacyRoutes);
 app.use("/api/medicine", medicineRoutes);
 app.use("/api/search", searchRouter);
 
-app.get("/", (req, res) => {
-  res.json({ message: "MedExchange Backend is Live 🚀" });
-});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
