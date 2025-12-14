@@ -14,7 +14,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log("DB Error:", err));
 
-import pharmacyRoutes from "./routes/pharmacyRoutes.js";
+import pharmacyRoutes from "./routes/PharmacyRoutes.js";
 import medicineRoutes from "./routes/medicineRoutes.js";
 import searchRouter from "./routes/searchRoute.js";
 
